@@ -224,3 +224,8 @@ function findNeedle(haystack) {
   function removeExclamationMarks(s) {
     return s.replaceAll('!', '')
   }
+  
+// 29 - 8 kyu - Grasshopper - Personalized Message
+  function greet (name, owner) {
+    return name === owner ? 'Hello boss' : 'Hello guest'
+  }
