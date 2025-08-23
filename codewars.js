@@ -229,4 +229,8 @@ function findNeedle(haystack) {
   function greet (name, owner) {
     return name === owner ? 'Hello boss' : 'Hello guest'
   }
-  
+
+// 30 - 8 kyu - Beginner - Lost Without a Map
+  function maps(x){
+    return x.map(n => n * 2)
+  }
