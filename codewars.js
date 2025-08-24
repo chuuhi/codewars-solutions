@@ -234,3 +234,11 @@ function findNeedle(haystack) {
   function maps(x){
     return x.map(n => n * 2)
   }
+
+// 31 - 8 kyu - Abbreviate a Two Word Name
+  function abbrevName(name){
+    const nameParts = name.split(' ')
+    const firstInitial = nameParts[0].charAt(0).toUpperCase()
+    const lastInitial = nameParts[1].charAt(0).toUpperCase()
+    return `${firstInitial}.${lastInitial}`
+  }
