@@ -242,3 +242,8 @@ function findNeedle(haystack) {
     const lastInitial = nameParts[1].charAt(0).toUpperCase()
     return `${firstInitial}.${lastInitial}`
   }
+
+// 32 - 8 kyu - Double Char
+  function doubleChar(str) {
+    return str.split('').map(char => char + char).join('')
+  }
