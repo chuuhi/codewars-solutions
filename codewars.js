@@ -263,3 +263,13 @@ function findNeedle(haystack) {
       case 9: return 'Nine'
     }
   }
+
+// 34 - 8 kyu - Calculate average
+  function findAverage(array) {
+    if (array.length === 0){
+      return 0
+    }else{
+    sum = array.reduce((acc,c) => acc + c, 0)
+    return sum / array.length
+    }
+  }
