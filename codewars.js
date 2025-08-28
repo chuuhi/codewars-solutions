@@ -273,3 +273,9 @@ function findNeedle(haystack) {
     return sum / array.length
     }
   }
+
+  // 35 - 8 kyu - How good are you really?
+  function betterThanAverage(classPoints, yourPoints) {
+    let peerScores = classPoints.reduce((acc,c) => acc + c, 0) / classPoints.length
+    return yourPoints > peerScores ? true : false
+  }
