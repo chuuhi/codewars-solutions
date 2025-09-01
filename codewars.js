@@ -300,3 +300,10 @@ function findNeedle(haystack) {
     }
     return fizzBuzz
   }
+
+// 38 - 8 kyu - Convert number to reversed array of digits
+  function digitize(n) {
+    let str = n.toString()
+    let reverse = str.split('').reverse()
+    return reverse.map(Number)
+  }
