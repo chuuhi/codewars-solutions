@@ -307,3 +307,21 @@ function findNeedle(haystack) {
     let reverse = str.split('').reverse()
     return reverse.map(Number)
   }
+
+// 39 - 6 kyu - Are they the "same"?
+
+function comp(array1, array2){
+  if (!array1 || !array2){
+    return false;
+  }
+  
+  if (array1.length !== array2.length){
+    return false;
+  }
+  
+  const sorted1 = array1.slice().sort((a,b)=> a - b);
+  const sorted2 = array2.slice().sort((a,b)=> a - b);
+  const sortedSquared1 = sorted1.map(x => x * x);
+  
+  return sortedSquared1.every((val,i) => val === sorted2[i]);
+}
