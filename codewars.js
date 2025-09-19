@@ -325,3 +325,26 @@ function comp(array1, array2){
   
   return sortedSquared1.every((val,i) => val === sorted2[i]);
 }
+
+// 40 - 6 kyu - Consecutive strings
+
+function longestConsec(strarr, k) {
+  if (k <= 0 || k > strarr.length || strarr.length === 0){
+    return ""
+  }
+  
+  let maxLength = 0
+  let result = ""
+  
+  for (let i = 0; i <= strarr.length - k; i++){
+    let combined = ""
+    for (let j = i; j < i + k; j++){
+      combined += strarr[j]
+    }
+    if (combined.length > maxLength){
+      maxLength = combined.length
+      result = combined
+    }
+  }
+  return result
+}
