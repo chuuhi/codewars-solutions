@@ -348,3 +348,22 @@ function longestConsec(strarr, k) {
   }
   return result
 }
+
+// 41 - 6 kyu -Sort the odd
+
+function sortArray(array) {
+  const oddNumbers = array.filter(num => num % 2 !== 0).sort((a,b)=> a - b)
+  
+  const result = []
+  let oddIndex = 0
+  
+  for (let i = 0; i < array.length; i++){
+    if (array[i] % 2 === 0){
+      result[i] = array[i]
+    }else{
+      result[i] = oddNumbers[oddIndex]
+      oddIndex++
+    }
+  }
+  return result
+}
