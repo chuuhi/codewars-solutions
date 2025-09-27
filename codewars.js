@@ -389,3 +389,9 @@ function likes(names) {
   if(names.length === 3) return names[0] + ", " + names[1] + " and " + names[2] + " like this";
   return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
 }
+
+// 44 - 8 kyu - Sum of positive (refactor!)
+function positiveSum(arr){
+  let posArr = arr.filter(number => number >= 0)
+  return posArr.reduce((ac,c) => ac + c, 0)
+}
