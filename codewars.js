@@ -395,3 +395,16 @@ function positiveSum(arr){
   let posArr = arr.filter(number => number >= 0)
   return posArr.reduce((ac,c) => ac + c, 0)
 }
+
+// 45 8 kyu - Square(n) Sum
+function squareSum(numbers){
+  let sum = 0
+  for (let num of numbers){
+    sum += num ** 2
+  }
+  return sum
+}
+
+function squareSum(numbers){
+  return numbers.reduce((sum, num) => sum + num ** 2, 0)
+}
