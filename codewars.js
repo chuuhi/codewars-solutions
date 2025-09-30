@@ -396,7 +396,7 @@ function positiveSum(arr){
   return posArr.reduce((ac,c) => ac + c, 0)
 }
 
-// 45 8 kyu - Square(n) Sum
+// 45 - 8 kyu - Square(n) Sum
 function squareSum(numbers){
   let sum = 0
   for (let num of numbers){
@@ -407,4 +407,11 @@ function squareSum(numbers){
 
 function squareSum(numbers){
   return numbers.reduce((sum, num) => sum + num ** 2, 0)
+}
+
+// 46 - 7 kyu - Sum of two lowest positive integers
+
+function sumTwoSmallestNumbers(numbers){  
+  const sorted = numbers.sort((a, b) => a - b)
+  return sorted[0] + sorted[1]
 }
