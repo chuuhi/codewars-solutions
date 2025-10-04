@@ -415,3 +415,33 @@ function sumTwoSmallestNumbers(numbers){
   const sorted = numbers.sort((a, b) => a - b)
   return sorted[0] + sorted[1]
 }
+
+// 47 - 6 kyu - Counting Duplicates
+
+function duplicateCount(text){
+  let sorted = text.toLowerCase().split('').sort()
+  let duplicates = []
+  
+  for (let i = 0; i < sorted.length; i++){
+    if (sorted[i] === sorted[i + 1] && ! duplicates.includes(sorted[i])){
+      duplicates.push(sorted[i])
+    }
+  }
+  return duplicates.length
+}
+
+function duplicateCount(text){
+  const lower = text.toLowerCase()
+
+  const counts = {}
+  for (const char of lower){
+    counts[char] = (counts[char] || 0 ) + 1
+  }
+  let duplicates = 0
+  for (const count of Object.values(counts)){
+    if (count > 1){
+      duplicates++
+    }
+  }
+  return duplicates
+}
